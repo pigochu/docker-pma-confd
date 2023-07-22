@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  phpmyadmin:
+    container_name: phpmyadmin
+    image: phpmyadmin:latest
+    ports:
+      - 8080:80
+    volumes:
+      - "./conf.d:/etc/phpMyAdmin/conf.d"
+    networks:
+      - net
+  pma-confd:
+    container_name: pma-confd
+    image: pigochu/pma-confd:latest
+    environment:
+      - NODE_OPTIONS="--max-old-space-size=128"
+    volumes:
+      - "./conf.d:/app/conf.d"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    networks:
+      - net
+
+networks:
+  net:

@@ -1,0 +1,36 @@
+{
+  "name": "docker-pma-confd",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pigochu/docker-pma-confd.git"
+  },
+  "keywords": [
+    "docker",
+    "phpmyadmin",
+    "auto",
+    "config"
+  ],
+  "author": "Pigo Chu <pigochu@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pigochu/docker-pma-confd/issues"
+  },
+  "homepage": "https://github.com/pigochu/docker-pma-confd#readme",
+  "dependencies": {
+    "dockerode": "^3.3.5"
+  },
+  "volta": {
+    "node": "18.17.0"
+  },
+  "devDependencies": {
+    "@types/dockerode": "^3.3.19",
+    "typescript": "^5.1.6"
+  }
+}
